@@ -1,3 +1,43 @@
-#mapid {
-	height: 180px; 
-}
+  #cdf_map {
+  	height: 690px;
+  	width: 680px;
+  	margin-left: 3%;
+  }
+  
+  .ug-lightbox .ug-textpanel-title {
+  	font-weight: 700;
+  	font-size: 20px;
+  }
+  
+  .center {
+  	padding: 0.3em;
+  	margin-left: -0.50em;
+  }
+  
+  .ui-dialog {
+  	z-index: 1000 !important;
+  	box-shadow: #000 5px 5px 5px;
+  }
+  
+  .ui-front {
+  	z-index: 1000 !important;
+  }
+  
+  .imgPopup {
+  	height: 8em;
+  	padding: 0.2em;
+  }
+  
+  .carousel {
+  	text-align: center;
+  }
+  
+  .lightbox {
+  	position: absolute;
+  	z-index: 2147483647 !important;
+  }
+  
+  .lightboxOverlay {
+  	position: absolute;
+  	z-index: 2147483647 !important;
+  }
