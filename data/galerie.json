@@ -1,260 +1,52 @@
 {
-    "vert": [{
+    "patrimoine": [{
         "id": "0",
         "marqueur": "A",
-        "titre": "Le Boulevard des Pyrénées",
+        "titre": "Titre patrimoine",
         "geoloc": {
             "lat": 43.105065,
             "lng": 0.719648
         },
-        "images": [{
+        "videos": [{
             "nbr": "0",
-            "url": "images/A-boulevard_des_Pyrenées.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "1",
-            "url": "images/A -boulevard_des_Pyrenées2.jpg",
+            "url": "iRYlgZRj_qA",
             "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
         }
     ],
-        "sentier": [
-            [43.106140, 0.720790],
-            [43.104530, 0.719075],
-            [43.104364, 0.718895],
-            [43.104235, 0.718726],
-            [43.104078, 0.718528],
-            [43.103931, 0.718348],
-            [43.103810, 0.718187],
-            [43.103401, 0.717675],
-            [43.102745, 0.716860],
-            [43.102385, 0.716410],
-            [43.101957, 0.715867],
-            [43.101626, 0.715449],
-            [43.101434, 0.715199],
-            [43.101238, 0.715004],
-            [43.100962, 0.714743],
-            [43.100698, 0.714518],
-            [43.099803, 0.713834],
-            [43.099734, 0.713775],
-            [43.099654, 0.713710],
-            [43.099488, 0.713413],
-            [43.099323, 0.713027],
-            [43.099253, 0.712665],
-            [43.099230, 0.712434],
-            [43.099221, 0.712182],
-            [43.099208, 0.711887],
-            [43.099217, 0.711707],
-            [43.099247, 0.711538],
-            [43.099298, 0.711383],
-            [43.099390, 0.711230],
-            [43.099570, 0.711141],
-            [43.099703, 0.711069],
-            [43.100455, 0.710978],
-            [43.101810, 0.710870],
-            [43.102856, 0.710760],
-            [43.103671, 0.710674],
-            [43.103871, 0.710760],
-            [43.103981, 0.710814],
-            [43.104101, 0.710809],
-            [43.104228, 0.710742],
-            [43.104353, 0.710634],
-            [43.104522, 0.710452],
-            [43.104557, 0.710412],
-            [43.104610, 0.710430],
-            [43.105017, 0.710436],
-            [43.105947, 0.710412],
-            [43.106190, 0.710326],
-            [43.106488, 0.710096],
-            [43.107000, 0.709710],
-            [43.107414, 0.709531],
-            [43.108128, 0.709348],
-            [43.108170, 0.709109],
-            [43.108289, 0.709066],
-            [43.108503, 0.709058],
-            [43.108684, 0.708875],
-            [43.108684, 0.708986],
-            [43.108607, 0.709332],
-            [43.107484, 0.709646],
-            [43.107062, 0.709818],
-            [43.106202, 0.710461],
-            [43.105945, 0.710558],
-            [43.105679, 0.710571],
-            [43.105164, 0.710547],
-            [43.104518, 0.710517],
-            [43.104485, 0.710558],
-            [43.104466, 0.711118],
-            [43.104616, 0.712789],
-            [43.104741, 0.713664],
-            [43.104925, 0.714281],
-            [43.105197, 0.715230],
-            [43.106263, 0.718655],
-            [43.106406, 0.719620],
-            [43.106120, 0.720790]
-
-        ],
         "texte": "Promenade arborée face aux plus hauts sommets pyrénéens. Voie cyclable et parcours santé."
-    },
-    {
-        "id": "1",
-        "marqueur": "B",
-        "titre": "Pyrénées, Garonne",
-        "geoloc": {
-            "lat": 43.099973,
-            "lng": 0.710764
-        },
-        "images": [{
-            "nbr": "0",
-            "url": "images/B-Plaine_de_la_Garonne.jpg",
-
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "1",
-            "url": "images/B-Sculpture de André Abbal.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        }
-    ],
-        "texte": "Vue panoramique sur les Pyrénées occidentales et la plaine de la Garonne. Sculpture en taille directe d'André Abbal, élève de Rodin."
-    },
-    {
-        "id": "2",
-        "marqueur": "C",
-        "titre": "La légende de Saint-Gaudens: La Montjoie",
-        "geoloc": {
-            "lat": 43.105457,
-            "lng": 0.709841
-        },
-        "images": [{
-            "nbr": "0",
-            "url": "images/C- Chapelle de Caoue.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "1",
-            "url": "images/C-La_légende_de_Saint_Gaudens.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "2",
-            "url": "images/C-la_légende_de_saint_gaudens.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        }
-    ],
-        "texte": "Lieu du martyre du jeune Gaudens. Fontaine du bourreau. Chapelle de la Caoue du XIXème siècle, style néo-roman."
-    },
-    {
-        "id": "3",
-        "marqueur": "D",
-        "titre": "Le circuit autos-motos du Comminges (1925-1954)",
-        "geoloc": {
-            "lat": 43.108684,
-            "lng": 0.708875
-        },
-        "images": [{
-            "nbr": "0",
-            "url": "images/D-sport.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        },
-        {
-            "nbr": "1",
-            "url": "images/D-sport.jpg",
-            "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-        }
-    ],
-        "texte": "Des pilotes, des voitures et motos de légende: Pozzi, Villoresi, Dreyfus, Trintignant, Ascari, ..."
     }
 ],
-"annexes": [{
-    "id": "0",
-    "marqueur": "1",
-    "titre": "Mairie",
-    "geoloc": {
-        "lat": 43.106953,
-        "lng": 0.723588
-    },
-    "images": [{
-        "nbr": "0",
-        "url": "images/Mairie-1.jpg",
-        "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-    }],
-    "texte": ""
-},
-{
-    "id": "1",
-    "marqueur": "2",
-    "titre": "Poste",
-    "geoloc": {
-        "lat": 43.108865,
-        "lng": 0.722527
-    },
-    "images": [{
-        "nbr": "0",
-        "url": "http://placehold.it/600x900",
-        "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-    }],
-    "texte": ""
-},
-{
-    "id": "2",
-    "marqueur": "3",
-    "titre": "Maison de la Communauté",
-    "geoloc": {
-        "lat": 43.107686,
-        "lng": 0.722161
-    },
-    "images": [{
-        "nbr": "0",
-        "url": "images/Maison de la communauté-7.jpg",
-        "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-    }],
-    "texte": ""
-},
-{
-    "id": "3",
-    "marqueur": "4",
-    "titre": "Cinéma",
-    "geoloc": {
-        "lat": 43.108639,
-        "lng": 0.718733
-    },
-    "images": [{
-        "nbr": "0",
-        "url": "http://placehold.it/600x900",
-        "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-    }],
-    "texte": ""
-},
-{
-    "id": "4",
-    "marqueur": "5",
-    "titre": "Théatre Jean Marmignon",
-    "geoloc": {
-        "lat": 43.109538,
-        "lng": 0.725465
-    },
-    "images": [{
-        "nbr": "0",
-        "url": "images/theatre_Marmignon-1.jpg",
-        "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-    }],
-    "texte": ""
-},
-{
-    "id": "5",
-    "marqueur": "6",
-    "titre": "Cyberbase / MJC",
-    "geoloc": {
-        "lat": 43.109163,
-        "lng": 0.726533
-    },
-    "images": [{
-        "nbr": "0",
-        "url": "images/Cyberbase.jpg",
-        "credit": " credit photo O.CADIOU/A.GIOIA ERN Simplon"
-    }],
-    "texte": ""
-}
+    "initiative": [{
+        "id": "0",
+        "marqueur": "1",
+        "titre": "Titre initiative",
+        "geoloc": {
+            "lat": 43.106953,
+            "lng": 0.723588
+        },
+        "videos": [{
+            "nbr": "0",
+            "url": "0xCE0Q5du1A",
+            "credit": "credit"
+        }],
+        "texte": ""
+    }
+],
+    "culture": [{
+        "id": "0",
+        "marqueur": "1",
+        "titre": "Titre culture",
+        "geoloc": {
+            "lat": 43.105000,
+            "lng": 0.730200
+        },
+        "videos": [{
+            "nbr": "0",
+            "url": "jQxEiB1OxD8",
+            "credit": "credit"
+        }],
+        "texte": ""
+    }
 ]
 
 }
