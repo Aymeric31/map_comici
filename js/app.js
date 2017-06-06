@@ -38,7 +38,6 @@
                     app.init();
                 }
             });
-
             //bouton pour ouvrir la galerie sur la map
             $("#dialog").dialog({
                 autoOpen: false,
@@ -77,11 +76,9 @@
                 this.borderColor = borderColor;
                 this.backgroundColor = backgroundColor;
                 this.textColor = textColor;
-                this.isAlphaNumericIcon = true;
                 this.innerIconStyle = 'margin:auto';
+                this.iconShape = 'marker';
             };
-
-
             //circuit vert clair
             for (i = 0; i < data.patrimoine.length; i++) {
                 //marqueurs                 
@@ -90,11 +87,10 @@
                 var longPatrimoine = data.patrimoine[i].geoloc.lng;
                 markersPatrimoine = L.marker([latPatrimoine, longPatrimoine], {
                     icon: L.BeautifyIcon.icon({
-                        iconSize: markersPatrimoine.iconSize,
                         borderColor: markersPatrimoine.borderColor,
                         backgroundColor: markersPatrimoine.backgroundColor,
-                        isAlphaNumericIcon: markersPatrimoine.isAlphaNumericIcon,
                         text: markersPatrimoine.text,
+                        iconShape: markersPatrimoine.iconShape,
                         textColor: markersPatrimoine.textColor,
                         innerIconStyle: markersPatrimoine.innerIconStyle
                     })
@@ -112,22 +108,13 @@
                 markersPatrimoine.bindPopup(contentPopupPatrimoine);
             };
 
-            //batiments officiels
+            //marqueurs
             for (i = 0; i < data.initiative.length; i++) {
                 //marqueurs
                 var markersInitiative = new Marker(data.initiative[i].marqueur, '#193025', "rgba(0, 100, 0, 0.5)", '#000');
                 var latInitiative = data.initiative[i].geoloc.lat;
                 var longInitiative = data.initiative[i].geoloc.lng;
                 markersInitiative = L.marker([latInitiative, longInitiative], {
-                    icon: L.BeautifyIcon.icon({
-                        iconSize: markersInitiative.iconSize,
-                        borderColor: markersInitiative.borderColor,
-                        backgroundColor: markersInitiative.backgroundColor,
-                        isAlphaNumericIcon: markersInitiative.isAlphaNumericIcon,
-                        text: markersInitiative.text,
-                        textColor: markersInitiative.textColor,
-                        innerIconStyle: markersInitiative.innerIconStyle
-                    })
                 }).addTo(map);
                 //popup
                 titreInitiative = data.initiative[i].titre;
@@ -143,15 +130,14 @@
             };
             for (i = 0; i < data.culture.length; i++) {
                 //marqueurs
-                var markersCulture = new Marker(data.culture[i].marqueur, '#193025', "rgba(0, 100, 0, 0.5)", '#000');
+                var markersCulture = new Marker(data.culture[i].marqueur, '#6ef442', "rgba(110, 244, 66, 0.5)", '#000');
                 var latCulture = data.culture[i].geoloc.lat;
                 var longCulture = data.culture[i].geoloc.lng;
                 markersCulture = L.marker([latCulture, longCulture], {
                     icon: L.BeautifyIcon.icon({
                         iconSize: markersCulture.iconSize,
                         borderColor: markersCulture.borderColor,
-                        backgroundColor: markersCulture.backgroundColor,
-                        isAlphaNumericIcon: markersCulture.isAlphaNumericIcon,
+                        // backgroundColor: markersCulture.backgroundColor,
                         text: markersCulture.text,
                         textColor: markersCulture.textColor,
                         innerIconStyle: markersCulture.innerIconStyle
@@ -169,6 +155,14 @@
                 contentPopupCulture += "</div><p>" + texteCulture + "</p>";
                 markersCulture.bindPopup(contentPopupCulture);
             };
+            //filtre point
+            var overlayMaps = {
+                "Point Culture": markersCulture,
+                "Point Initiative": markersInitiative,
+                "Point Patrimoine": markersPatrimoine
+            };
+            L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
+
         },
 
         // videotheque
@@ -217,14 +211,14 @@
 })();
 
 //filtre phototheque
-function select(photoVert, photoAnnexes) {
+function select(patrimoineVideo, initiativeVideo) {
     $("#selectTheme").on("change", function() {
-        if ($(this).val() == "Vert") {
-            $("#gallery").html(photoVert);
-        } else if ($(this).val() == "Annexes") {
-            $("#gallery").html(photoAnnexes);
+        if ($(this).val() == "patrimoine") {
+            $("#gallery1").html(patrimoineVideo);
+        } else if ($(this).val() == "initiative") {
+            $("#gallery1").html(initiativeVideo);
         } else {
-            $('#gallery').html(photoVert + photoAnnexes);
+            $('#gallery1').html(patrimoineVideo + initiativeVideo);
         };
         unitegallery();
     });
@@ -234,7 +228,7 @@ function select(photoVert, photoAnnexes) {
 function unitegallery() {
     $("#gallery1").unitegallery({
         grid_num_rows:10,
-        theme_navigation_type: "bullets",
+        theme_navigation_type: "bullets"
 
     });
 };
