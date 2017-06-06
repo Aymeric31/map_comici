@@ -22,21 +22,4 @@
   	z-index: 1000 !important;
   }
   
-  .imgPopup {
-  	height: 8em;
-  	padding: 0.2em;
-  }
-  
-  .carousel {
-  	text-align: center;
-  }
-  
-  .lightbox {
-  	position: absolute;
-  	z-index: 2147483647 !important;
-  }
-  
-  .lightboxOverlay {
-  	position: absolute;
-  	z-index: 2147483647 !important;
-  }
+

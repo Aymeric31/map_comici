@@ -63,7 +63,6 @@
                         $("#dialog").dialog("open");
                         app.initgallery(data);
                     },
-                    title: 'Galerie Photos',
                     icon: '<img class="center" src="../videos/glyphicons-9-film.png">'
                 }]
             }).addTo(map);
@@ -79,7 +78,7 @@
                 this.innerIconStyle = 'margin:auto';
                 this.iconShape = 'marker';
             };
-            //circuit vert clair
+            //marqueurs patrimoine
             for (i = 0; i < data.patrimoine.length; i++) {
                 //marqueurs                 
                 var markersPatrimoine = new Marker(data.patrimoine[i].marqueur, '#18453B', "rgba(0, 171, 57, 0.5)", '#000');
@@ -99,7 +98,7 @@
                 titrePatrimoine = data.patrimoine[i].titre;
                 textePatrimoine = data.patrimoine[i].texte;
                 var contentPopupPatrimoine = '';
-                contentPopupPatrimoine += "<h2>" + titrePatrimoine + "</h2>" + "<br><div class='carousel'>";
+                contentPopupPatrimoine += "<h2>" + titrePatrimoine + "</h2>";
                 for (j = 0; j < data.patrimoine[i].videos.length; j++) {
                     var vidPatrimoine = data.patrimoine[i].videos[j].url;
                     contentPopupPatrimoine += '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/' + vidPatrimoine + '" frameborder="0" allowfullscreen></iframe>';
@@ -108,7 +107,7 @@
                 markersPatrimoine.bindPopup(contentPopupPatrimoine);
             };
 
-            //marqueurs
+            //marqueurs initiative
             for (i = 0; i < data.initiative.length; i++) {
                 //marqueurs
                 var markersInitiative = new Marker(data.initiative[i].marqueur, '#193025', "rgba(0, 100, 0, 0.5)", '#000');
@@ -120,7 +119,7 @@
                 titreInitiative = data.initiative[i].titre;
                 texteInitiative = data.initiative[i].texte;
                 var contentPopupInitiative = '';
-                contentPopupInitiative += "<h2>" + titreInitiative + "</h2>" + "<br><div class='carousel'>";
+                contentPopupInitiative += "<h2>" + titreInitiative + "</h2>";
                 for (j = 0; j < data.initiative[i].videos.length; j++) {
                     var vidInitiative = data.initiative[i].videos[j].url;
                     contentPopupInitiative += '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/' + vidInitiative + '" frameborder="0" allowfullscreen></iframe>';
@@ -128,6 +127,8 @@
                 contentPopupInitiative += "</div><p>" + texteInitiative + "</p>";
                 markersInitiative.bindPopup(contentPopupInitiative);
             };
+
+            //marqueurs culture
             for (i = 0; i < data.culture.length; i++) {
                 //marqueurs
                 var markersCulture = new Marker(data.culture[i].marqueur, '#6ef442', "rgba(110, 244, 66, 0.5)", '#000');
@@ -137,7 +138,6 @@
                     icon: L.BeautifyIcon.icon({
                         iconSize: markersCulture.iconSize,
                         borderColor: markersCulture.borderColor,
-                        // backgroundColor: markersCulture.backgroundColor,
                         text: markersCulture.text,
                         textColor: markersCulture.textColor,
                         innerIconStyle: markersCulture.innerIconStyle
@@ -147,7 +147,7 @@
                 titreCulture = data.culture[i].titre;
                 texteCulture = data.culture[i].texte;
                 var contentPopupCulture = '';
-                contentPopupCulture += "<h2>" + titreCulture + "</h2>" + "<br><div class='carousel'>";
+                contentPopupCulture += "<h2>" + titreCulture + "</h2>";
                 for (j = 0; j < data.culture[i].videos.length; j++) {
                     var vidCulture = data.culture[i].videos[j].url;
                     contentPopupCulture += '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/' + vidCulture + '" frameborder="0" allowfullscreen></iframe>';
@@ -157,9 +157,9 @@
             };
             //filtre point
             var overlayMaps = {
-                "Point Culture": markersCulture,
-                "Point Initiative": markersInitiative,
-                "Point Patrimoine": markersPatrimoine
+                "Culture": markersCulture,
+                "Initiative": markersInitiative,
+                "Patrimoine": markersPatrimoine
             };
             L.control.layers(null, overlayMaps, { collapsed: false, position: 'topright' }).addTo(map);
 
@@ -227,7 +227,7 @@ function select(patrimoineVideo, initiativeVideo) {
 //définition galerie
 function unitegallery() {
     $("#gallery1").unitegallery({
-        grid_num_rows:10,
+        grid_num_rows: 9999,
         theme_navigation_type: "bullets"
 
     });
