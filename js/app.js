@@ -42,7 +42,7 @@
             $("#dialog").dialog({
                 autoOpen: false,
                 resizable: false,
-                width: "auto",
+                width: "400px",
                 fluid: true,
                 clickOut: false,
                 responsive: true,
@@ -209,20 +209,6 @@
     }
     app.init();
 })();
-
-//filtre phototheque
-function select(patrimoineVideo, initiativeVideo) {
-    $("#selectTheme").on("change", function() {
-        if ($(this).val() == "patrimoine") {
-            $("#gallery1").html(patrimoineVideo);
-        } else if ($(this).val() == "initiative") {
-            $("#gallery1").html(initiativeVideo);
-        } else {
-            $('#gallery1').html(patrimoineVideo + initiativeVideo);
-        };
-        unitegallery();
-    });
-};
 
 //définition galerie
 function unitegallery() {
